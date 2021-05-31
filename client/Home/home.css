@@ -23,6 +23,9 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
+   background: #252529;
+   position: fixed;
+   z-index: 1000;
 }
 
 .logo{
