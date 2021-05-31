@@ -1,0 +1,44 @@
+.appname{
+
+    color: rgb(0, 162, 255);
+    text-align: center;
+}
+hr{
+    background: red;
+}
+.masterlist{
+    border-collapse: collapse;
+    margin: 50px 25px;
+    font-size: 28px;
+    border-radius: 5px 5px 0 0 ;
+    overflow: hidden;
+    box-shadow: 0 0 10px  rgb(165, 165, 165);
+}
+.masterlist thead tr{
+   background-color: rgb(0, 162, 255);
+    color: white;
+    text-align: center;
+}
+.masterlist th,
+.masterlist td{
+    padding: 14px 17px;
+}
+.masterlist tbody tr{
+
+    border-bottom: 2px solid rgb(182, 182, 182);
+}
+.masterlist tbody tr:nth-last-of-type(even){
+
+    background-color: rgb(236, 254, 255);
+}
+a{
+    text-decoration: none;
+    display: inline-block;
+    color: rgb(0, 0, 0);
+    background-color: rgb(255, 91, 91);
+    padding: 2px 5px;
+    border-radius: 5px 5px ;
+    font-size: 20px;
+    box-shadow: 0 0 5px  rgb(165, 165, 165);
+
+}

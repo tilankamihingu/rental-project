@@ -29,7 +29,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Product table</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./product_table.css">
 </head>
 
 <body>
@@ -40,17 +40,19 @@
     <main>
 
         <table class="masterlist">
+            <thead>
             <tr>
-                <th>title</th>
-                <th>category</th>
-                <th>contact</th>
-                <th>description</th>
-                <th>address</th>
+                <th>Title</th>
+                <th>Category</th>
+                <th>Contact</th>
+                <th>Description</th>
+                <th>Address</th>
                 <th>Delete</th>
             </tr>
+            </thead>
 
             <?php echo $product_list; ?>
-
+           
         </table>
 
 

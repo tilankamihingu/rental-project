@@ -28,7 +28,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Member Accounts</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="./user_table.css">
 </head>
 
 <body>
@@ -39,13 +39,14 @@
     <main>
 
         <table class="masterlist">
-            <tr>
+            <thead>
                 <th>First Name</th>
                 <th>Last Name</th>
-                <th>email</th>
+                <th>E-mail</th>
                 <th>Last Login</th>
-                <th>Delete</th>
-            </tr>
+                <th class="delete">Delete</th>
+            </thead>
+    
 
             <?php echo $user_list; ?>
 
