@@ -15,8 +15,8 @@
 <body>
 <h2>Event Planer Admin Area</h2>
 <h1>Hello admin, What do you want to do?</h1>
-<a href="table.html" class="button">I want to access the member <br>account information</a>
-<a href="table2.html" class="button2">I want to access information <br>about Ads</a>
+<a href="user_table.php" class="button">I want to access the member <br>account information</a>
+<a href="product_table.php" class="button2">I want to access information <br>about Ads</a>
 <div class="image">
     <img src="images/admin.jpg">
 </div>
