@@ -64,7 +64,7 @@
      width: 100%;
  }
 
-.register-content{
+.login-content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -72,40 +72,41 @@
     padding-right: 10px;
 }
 
-.register{
+.login{
     position: relative;
     display: flex;
     max-width: 600px;
     width: 100%;
     margin-top: 20vh;
+   
     border: 2px solid darkcyan;
 }
 
-.left-side{
+.left-side-login{
     width: 40%;
     background: darkcyan;
     text-align: center;
     display: flex;
 }
 
-.left-side img{
+.left-side-login img{
     width: 150px;
     height: 100px;
     margin-top: 100px;
 }
 
-.title-register{
+.title-login{
     margin: auto;
     color: #fff;
     font-size: 40px;
 }
 
-.title-register a{
+.title-login a{
     text-decoration: none;
     color: darkred;
 }
 
-.right-side{
+.right-side-login{
     width: 50%;
     padding: 5%;
     display: flex;
@@ -113,12 +114,12 @@
     justify-content: center;
 }
 
-.right-side h2{
+.right-side-login h2{
     font-size: 20px;
     margin-bottom: 20px;
 }
 
-.right-side input{
+.right-side-login input{
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
@@ -129,7 +130,7 @@
     padding-left: 5px;
 }
 
-.right-side .signup{
+.right-side-login .signin{
     width: 100%;
     height: 40px;
     border: none;
@@ -139,7 +140,7 @@
     margin-top: 20px;
 }
 
-.right-side .signin{
+.right-side-login .signup{
     background: none;
     outline: none;
     border: 1px solid #F57F11;
@@ -148,17 +149,17 @@
     width: 100%;
     height: 40px;
     color: #000;
-    font-size: 14px;
     font-weight: 600;
 }
 
-.right-side .signin a{
+.right-side-login .signup a{
     text-decoration: none;
     color: #000;
     font-size: 14px;
     font-weight: 600;
 }
-.right-side p{
+
+.right-side-login p{
     text-align: center;
     margin-top: 10px;
     font-weight: 600;
@@ -198,11 +199,11 @@
         transition: 0.5s;
     }
     
-    .title-register{
+    .title-login{
         font-size: 30px;
     }
 
-    .right-side input{
+    .right-side-login input{
         height: 30px;
     }
 }
