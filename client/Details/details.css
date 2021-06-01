@@ -33,6 +33,7 @@
  
  nav{
      margin-right: 200px;
+     margin-bottom: 20px;
      text-align: right;
      
  }
@@ -66,109 +67,81 @@
      width: 100%;
  }
 
-.register-content{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+ /*------------------details----------------*/
+
+ .item-details{
+    padding-top: 100px;
+    margin-bottom: 40px;
+    padding-bottom: 20px;
+}
+
+.item-detail-container{
+    max-width: 1080px;
+    margin: auto;
+    padding-top: 25px;
     padding-left: 10px;
     padding-right: 10px;
-    margin-bottom: 60px;
+    background: #fff;
+    box-shadow: 0 0 5px #ccc;
 }
 
-.register{
-    position: relative;
+
+
+.detail-row{
     display: flex;
-    max-width: 600px;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.detail-col{
+    flex-basis: 45%;
+    min-width: 250px;
+    margin-bottom: 30px;
+    margin-right: 5px;
+}
+
+.detail-col img{
     width: 100%;
-    margin-top: 20vh;
-    border: 2px solid darkcyan;
+    min-width: 200px;
+    max-height: 600px;
+    height: 100%;
 }
 
-.left-side{
-    width: 40%;
-    background: darkcyan;
-    text-align: center;
-    display: flex;
+.detail-col h1{
+    font-size: 45px;
+    color: #000;
+    margin-bottom: 20px;
 }
 
-.left-side img{
-    width: 150px;
-    height: 100px;
-    margin-top: 100px;
+.detail-col h4{
+    color: crimson;
+    font-size: 25px;
+    margin-bottom: 20px;
 }
 
-.title-register{
-    margin: auto;
-    color: #fff;
-    font-size: 40px;
-}
-
-.title-register a{
-    text-decoration: none;
-    color: darkred;
-}
-
-.right-side{
-    width: 50%;
-    padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.right-side h2{
-    font-size: 20px;
+.detail-col h5{
+    font-size: 18px;
+    color: #000;
     margin-bottom: 10px;
 }
 
-.right-side input{
-    width: 100%;
-    background: #FFFFFF;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
-    outline: none;
-    height: 40px;
+.detail-col p{
+    color: #000;
+    line-height: 25px;
     margin-bottom: 20px;
-    padding-left: 5px;
 }
 
-.right-side .signup{
-    width: 100%;
+.detail-button{
+    width: 300px;
     height: 40px;
+    outline: none;
+    background: #009688;
     border: none;
-    outline: none;
-    background: #F57F11;
-    border-radius: 10px;
-    margin-top: 10px;
-    cursor: pointer;
 }
 
-.right-side .signin{
-    background: none;
-    outline: none;
-    border: 1px solid #F57F11;
-    border-radius: 10px;
-    margin-top: 10px;
-    width: 100%;
-    height: 40px;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
-}
+/*---------------------footer-------------------*/
 
-.right-side .signin a{
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
-    font-weight: 600;
-}
-.right-side p{
-    text-align: center;
-    margin-top: 10px;
-    font-weight: 600;
-}
-
-/*------------footer-----------------------*/
 footer{
     width: 100%;
     background: #000;
@@ -267,11 +240,11 @@ footer h4{
    outline: none;
    width: 100%;
    height: 40px;
-   margin-top: 20px;
    margin-left: 0;
    margin-right: 0;
    border-radius: 0;
 }
+
 
 @media only screen and (max-width:700px){
     nav ul{
@@ -306,14 +279,16 @@ footer h4{
         overflow: hidden;
         transition: 0.5s;
     }
-    
-    .title-register{
-        font-size: 30px;
+
+    .content h1{
+        font-size: 50px;
     }
 
-    .right-side input{
-        height: 30px;
+    .content p{
+        margin-left: 20px;
+        margin-right: 20px;
     }
+
     .footer-container{
         flex-direction: column;
     }
@@ -342,4 +317,9 @@ footer h4{
     .center-content ul li{
         font-size: 16px;
     }
+
+    .detail-button{
+        width: 200px;
+    }
+
 }

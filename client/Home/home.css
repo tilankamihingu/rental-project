@@ -48,7 +48,6 @@ nav{
     margin-right: 200px;
     margin-bottom: 20px;
     text-align: right;
-    
 }
 
 nav ul li{
@@ -521,5 +520,13 @@ footer h4{
 
     .center-content ul li{
         font-size: 16px;
+    }
+
+    .plan-event-col h1{
+        font-size: 40px;
+    }
+
+    .plan-event-col p{
+        font-size: 14px;
     }
 }
