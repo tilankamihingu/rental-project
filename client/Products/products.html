@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./products.css">
+</head>
+<body>
+    <div class="navbar">
+        <img src="../images/logo.png" alt="" class="logo">
+        <nav>
+            <ul id="menuList">
+                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="../Products/products.html">Products</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login/Register</a></li>
+            </ul>
+            
+        </nav>
+        <img src="../images/menu.png" alt="" class="menu-icon" onclick="togglemenu()">
+    </div>
+    <!------------------products------------------------>
+    <div class="top-rated-container">
+        <h1>Top Rated</h1>
+    <div class="top-rated">
+        <div class="top-rated-card">
+            <img src="../images/dj.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="top-rated-card">
+            <img src="../images/car.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="top-rated-card">
+            <img src="../images/photo.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="top-rated-card">
+            <img src="../images/photo.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="top-rated-card">
+            <img src="../images/dj.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+        <div class="top-rated-card">
+            <img src="../images/car.jpg" alt="">
+            <div class="box">
+                <h3>DJ Party</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h4>RS.25000.00(per day)</h4>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script>
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+            else
+                {
+                    menuList.style.maxHeight = "0px";
+                }
+        }
+    </script>
+</body>
+</html>
