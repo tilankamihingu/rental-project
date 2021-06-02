@@ -8,6 +8,7 @@
 .full{
     background: darkgray;
     overflow: hidden;
+    width: 100%;
 }
 
 .navbar{
@@ -91,11 +92,11 @@
 }
 
 .products .product-card {
-    max-width: 340px;
+    max-width: 360px;
     background: #fff;
     width: 100%;
     overflow: hidden;
-    height: 570px;
+    height: 560px;
     box-shadow: 0 0 5px #ccc;
     padding: 15px;
     margin: 15px;
@@ -133,7 +134,7 @@
 
 .product-card .box h4 {
     color: crimson;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .product-card .box button {

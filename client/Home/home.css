@@ -270,12 +270,10 @@ button:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 15px 0;
-    background: cadetblue;
 }
 
 .top-rated-container{
    margin-bottom: 170px;
-   background: coral;
 }
 
 .top-rated-container h1{
@@ -284,7 +282,7 @@ button:hover{
 }
 
 .top-rated .top-rated-card {
-    max-width: 380px;
+    max-width: 360px;
     background: #fff;
     width: 100%;
     overflow: hidden;
@@ -345,16 +343,7 @@ button:hover{
     letter-spacing: 2px;
 }
 
-.row-card{
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    background: darkgoldenrod;
-    margin-bottom: 15px;
-    margin-left: 10px;
-    margin-right: 10px;
-}
+
 
 /*---------------------footer-------------------*/
 
