@@ -67,7 +67,7 @@
      width: 100%;
  }
 
-.login-content{
+.post-content{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,7 +76,7 @@
     margin-bottom: 60px;
 }
 
-.login{
+.add-post{
     position: relative;
     display: flex;
     max-width: 600px;
@@ -85,55 +85,53 @@
     border: 2px solid darkcyan;
 }
 
-.left-side-login{
+.left-side-post{
     width: 40%;
     background: darkcyan;
     text-align: center;
     display: flex;
 }
 
-.left-side-login img{
+.left-side-post img{
     width: 150px;
     height: 100px;
     margin-top: 100px;
 }
 
-.title-login{
+.title-post{
     margin: auto;
     color: #fff;
     font-size: 40px;
 }
 
-.title-login a{
+.title-post a{
     text-decoration: none;
     color: darkred;
 }
 
-.right-side-login{
-    width: 50%;
+.right-side-post{
+    width: 100%;
     padding: 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    
 }
 
-.right-side-login h2{
+.right-side-post h2{
     font-size: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
-.right-side-login input{
+.right-side-post input{
     width: 100%;
     background: #FFFFFF;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    border-radius: 10px;
+    border-radius: 5px;
     outline: none;
     height: 40px;
     margin-bottom: 20px;
-    padding-left: 5px;
+    padding-left: 5px;  
 }
 
-.right-side-login .signin{
+.right-side-post .signin{
     width: 100%;
     height: 40px;
     border: none;
@@ -143,7 +141,7 @@
     margin-top: 20px;
 }
 
-.right-side-login .signup{
+.right-side-post .signup{
     background: none;
     outline: none;
     border: 1px solid #F57F11;
@@ -155,17 +153,26 @@
     font-weight: 600;
 }
 
-.right-side-login .signup a{
+.right-side-post .signup a{
     text-decoration: none;
     color: #000;
     font-size: 14px;
     font-weight: 600;
 }
 
-.right-side-login p{
+.right-side-post p{
     text-align: center;
     margin-top: 10px;
     font-weight: 600;
+}
+
+.description input{
+    width: 300px;
+}
+
+.row-post{
+    display: flex;
+    justify-content: space-between;
 }
 
 /*------------footer-----------------------*/
