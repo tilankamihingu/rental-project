@@ -314,6 +314,14 @@ footer h4{
     .right-side input{
         height: 30px;
     }
+
+    .right-content form input{
+        width: 90%;
+    }
+
+    .footer-button{
+        width: 90%;
+    }
     .footer-container{
         flex-direction: column;
     }

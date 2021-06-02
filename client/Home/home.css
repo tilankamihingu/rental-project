@@ -290,6 +290,7 @@ button:hover{
     box-shadow: 0 0 5px #ccc;
     padding: 15px;
     margin: 15px;
+    border-radius: 5px;
     cursor: pointer;
     transition: 0.5s;
 }
@@ -504,6 +505,14 @@ footer h4{
 
     .right-content form h3{
         font-size: 18px;
+    }
+
+    .right-content form input{
+        width: 90%;
+    }
+
+    .footer-button{
+        width: 90%;
     }
 
     .left-box{
