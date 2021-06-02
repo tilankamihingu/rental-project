@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee4a922350.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
@@ -12,7 +13,11 @@
 </head>
 
 <body>
+    <div class="scroll-button">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
     <div class="full">
+        
     <div class="container">
         <div class="navbar">
             <img src="../images/logo.png" alt="" class="logo">
@@ -152,7 +157,6 @@
                 <button>watch</button>
             </div>
         </div>
-        
     </div>
     </div>
     <!----------------------footer----------------------------->
@@ -209,6 +213,24 @@
                     menuList.style.maxHeight = "0px";
                 }
         }
+
+        const scrollBtn = document.querySelector('.scroll-button')
+
+        window.addEventListener('scroll', () =>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollBtn.style.display = 'block';
+            }
+            else{
+                scrollBtn.style.display = 'none';
+            }
+        })
+        scrollBtn.addEventListener('click' , () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+       
     </script>
 
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
