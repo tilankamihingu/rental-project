@@ -16,11 +16,13 @@
     position: fixed;
     bottom: 20px;
     right: 20px;
-    color: #fff;
+    
+    color: #0F69F3;
+    z-index: 1000;
 }
 
 .scroll-button:hover{
-    color: gold;
+    color: #6149DC;
 }
 
 .scroll-button .active{
@@ -32,7 +34,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    
+    max-width: 1280px;
     justify-content: center;
     background-size: cover;
     background-position: center;
@@ -103,7 +105,6 @@ nav ul li a:hover::after{
     width: 100%;
     position: absolute;
     top: 50%;
-    
     transform: translateY(-50%);
     color: #000;   
     display: flex;
@@ -114,16 +115,16 @@ nav ul li a:hover::after{
 
 .content-details{
     
-    margin-right: 40px;
+    margin-right: 80px;
     padding: 10px;
     max-width: 600px;
     width: 100%;
 }
 
 .content img{
-    max-width: 450px;
+    max-width: 650px;
     width: 100%;
-    max-height: 600px;
+    max-height: 650px;
     height: 100%;
 }
 
@@ -188,7 +189,7 @@ button:hover{
 }
 
 .features-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -218,7 +219,7 @@ button:hover{
 }
 
 .most-choose-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -227,6 +228,7 @@ button:hover{
 .most-choose-container h1{
     margin-bottom: 20px;
     padding-bottom: 10px;
+    font-size: 37px;
     color: black;
     border-bottom: 1px solid #F2F6FC;
     text-align: center;
@@ -257,7 +259,7 @@ button:hover{
 }
 
 .plan-event-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -272,13 +274,16 @@ button:hover{
 
 .plan-event-col{
     flex-basis: 50%;
-    min-width: 250px;
+    max-width: 450px;
     margin-bottom: 30px;
 }
 
 .plan-event-col img{
+    max-width: 600px;
     width: 100%;
-    height: 600px;
+    max-height: 600px;
+    height: 100%;
+    margin: 20px;
 }
 
 .plan-event-col h1{
@@ -310,6 +315,7 @@ button:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 15px 0;
+    max-width: 1440px;
 }
 
 .top-rated-container{
@@ -319,6 +325,7 @@ button:hover{
 .top-rated-container h1{
     text-align: center;
     font-size: 55px;
+    font-weight: 800;
 }
 
 .top-rated .top-rated-card {
@@ -393,10 +400,12 @@ footer{
 }
 
 .footer-container{
-    max-width: 1080px;
+    max-width: 1280px;
+    width: 100%;
     margin: auto;
     display: flex;
     padding: 25px;
+    
 }
 
 footer h4{
@@ -481,6 +490,7 @@ footer h4{
 
 .footer-button{
    background: #6149DC;
+   color: #fff;
    border: none;
    outline: none;
    width: 100%;
@@ -490,8 +500,19 @@ footer h4{
    border-radius: 0;
 }
 
+.foot-icons{
+    display: flex;
+    font-size: 3rem;
+}
 
+.foot-icons i{
+    margin-right: 30px;
+    color: #fff;
+}
 
+.foot-icons i:hover{
+    color: crimson;
+}
 
 @media only screen and (max-width:700px){
     nav ul{
@@ -550,6 +571,10 @@ footer h4{
         margin: auto;
     }
 
+    .top-rated-container h1{
+        font-size: 47px;
+    }
+
     .footer-container{
         flex-direction: column;
     }
@@ -563,13 +588,13 @@ footer h4{
         font-size: 18px;
     }
 
-    .right-content form input{
+    /*.right-content form input{
         width: 90%;
     }
 
     .footer-button{
         width: 90%;
-    }
+    }*/
 
     .left-box{
         margin-bottom: 20px;
@@ -593,5 +618,14 @@ footer h4{
 
     .plan-event-col p{
         font-size: 14px;
+    }
+
+    .plan-event-col img{
+        margin: 0;
+        width: 300px;
+    }
+
+    .scroll-button{
+        font-size: 2rem;
     }
 }
