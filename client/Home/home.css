@@ -32,7 +32,8 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: url(../images/fsafe.png);
+    
+    justify-content: center;
     background-size: cover;
     background-position: center;
 }
@@ -57,10 +58,10 @@
 }
 
 .menu-icon{
-    width: 25px;
+    width: 30px;
     cursor: pointer;
     display: none;
-    border: 1px solid #009688;
+    margin-right: 20px;
 }
 
 nav{
@@ -102,14 +103,34 @@ nav ul li a:hover::after{
     width: 100%;
     position: absolute;
     top: 50%;
+    
     transform: translateY(-50%);
     color: #000;   
-    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.content-details{
+    
+    margin-right: 40px;
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.content img{
+    max-width: 450px;
+    width: 100%;
+    max-height: 600px;
+    height: 100%;
 }
 
 .content h1{
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 20px;
+    
 }
 
 .content p{
@@ -122,7 +143,7 @@ button{
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 20px 10px;
+    margin: 20px 0px;
     border-radius: 25px;
     font-weight: bold;
     border: 2px solid #6149DC;
@@ -150,7 +171,6 @@ button:hover span{
 }
 
 button:hover{
-    border: none;
     color: #F2F6FC;
 }
 
@@ -476,7 +496,8 @@ footer h4{
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: linear-gradient(#ff54a2, #ff575a);
+        background: #0F69F3;
+        opacity: 0.8;
         position: absolute;
         top: 75px;
         right: 0;
@@ -498,13 +519,17 @@ footer h4{
     }
 
     .logo{
-        width: 100px;
+    
         margin-left: 3px;
     }
 
     #menuList{
         overflow: hidden;
         transition: 0.5s;
+    }
+
+    .content{
+        flex-direction: column-reverse;
     }
 
     .content h1{
@@ -514,6 +539,15 @@ footer h4{
     .content p{
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .content img{
+        margin-top: 60px;
+    }
+
+    .content-details{
+        text-align: center;
+        margin: auto;
     }
 
     .footer-container{
