@@ -6,7 +6,7 @@
 }
 
 .full{
-    background: darkgray;
+    background: #F2F6FC;
     overflow: hidden;
 }
 
@@ -32,7 +32,7 @@
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('../images/banner.jpg');
+    background-image: url(../images/fsafe.png);
     background-size: cover;
     background-position: center;
 }
@@ -45,7 +45,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: #000;
+   background: #0F69F3;
    position: fixed;
    z-index: 1000;
 }
@@ -87,7 +87,7 @@ nav ul li a::after{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #D8E7FC;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -103,8 +103,8 @@ nav ul li a:hover::after{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    text-align: center;
-    color: #fff;   
+    color: #000;   
+    text-align: left;
 }
 
 .content h1{
@@ -125,16 +125,16 @@ button{
     margin: 20px 10px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #009688;
+    border: 2px solid #6149DC;
     background: transparent;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
 span{
-    background: #009688;
+    background: #6149DC;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -151,6 +151,7 @@ button:hover span{
 
 button:hover{
     border: none;
+    color: #F2F6FC;
 }
 
 /*----------------------features items-------------*/
@@ -193,7 +194,7 @@ button:hover{
 .most-choose{
     margin: 100px 0;
     padding: 30px;
-    background: #252529;
+    background: #D8E7FC;
 }
 
 .most-choose-container{
@@ -206,8 +207,8 @@ button:hover{
 .most-choose-container h1{
     margin-bottom: 20px;
     padding-bottom: 10px;
-    color: #fff;
-    border-bottom: 1px solid #009688;
+    color: black;
+    border-bottom: 1px solid #F2F6FC;
     text-align: center;
 }
 
@@ -274,7 +275,7 @@ button:hover{
 }
 .plan{
     width: 250px;
-    background: #009688;
+    background: #0F69F3;
     border: none;
     color: #fff;
     border-radius: 10px;
@@ -352,7 +353,7 @@ button:hover{
     width: 100%;
     border: none;
     outline: none;
-    background: #009688;
+    background: #0F69F3;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -368,7 +369,7 @@ button:hover{
 
 footer{
     width: 100%;
-    background: #000;
+    background: #0c0047;
 }
 
 .footer-container{
@@ -395,7 +396,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
     margin-bottom: 20px;
 }
 
@@ -414,7 +415,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .center-content{
@@ -436,7 +437,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .right-content{
@@ -453,13 +454,13 @@ footer h4{
     height: 40px;
     padding-left: 5px;
     border: none;
-    background: #ccc;
+    background: #F2F6FC;
     outline: none;
     margin-bottom: 10px;
 }
 
 .footer-button{
-   background: #009688;
+   background: #6149DC;
    border: none;
    outline: none;
    width: 100%;
