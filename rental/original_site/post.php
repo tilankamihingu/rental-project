@@ -66,15 +66,15 @@ $title = mysqli_real_escape_string($connection, $_POST['title']);
 $cate = mysqli_real_escape_string($connection, $_POST['cate']);
 $img = mysqli_real_escape_string($connection, $_FILES['img']['name']);
 $cont = mysqli_real_escape_string($connection, $_POST['cont']);
-$cont = mysqli_real_escape_string($connection, $_POST['price']);
+$price = mysqli_real_escape_string($connection, $_POST['price']);
 $descrip = mysqli_real_escape_string($connection, $_POST['descrip']);
 $add = mysqli_real_escape_string($connection, $_POST['add']);
 $cont = mysqli_real_escape_string($connection, $_POST['special']);
 
 $query = "INSERT INTO product (";
-$query .= "title, category, image , contact, price, description , address";
+$query .= "title, category, image , contact, price, description , address, special";
 $query .= ") VALUES (";
-$query .= "'{$title}','{$cate}','{$img}','{$cont}','{$price}', '{$descrip}','{$add}''{$special}'";
+$query .= "'{$title}','{$cate}','{$img}','{$cont}','{$price}', '{$descrip}','{$add}','{$special}'";
 $query .=")";
 
 $result = mysqli_query($connection, $query);
@@ -158,7 +158,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <h2>Description</h2>
                         <textarea class="description" id="description" rows="3" name=descrip></textarea>
                         <h2>Special</h2>
-                        <textarea class="description" id="description" rows="3" name=special></textarea>
+                        <textarea class="special" id="special" rows="3" name=special></textarea>
                     
                     <p>please put correct details and quality image for create successfull add.if you put wrost one we remove it.</p>
                     <button type="submit" name="submit" class="post-btn">Post</button>
