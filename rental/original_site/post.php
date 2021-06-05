@@ -1,0 +1,223 @@
+<?php session_start(); ?>
+<?php require_once('inc/connection.php'); ?>
+<?php require_once('inc/functions.php'); ?>
+<?php
+$errors=array();
+$title = '';
+$cate = '';
+$img = '';
+$cont = '';
+$price = '';
+$descrip = '';
+$add = '';
+$special = '';
+
+
+
+
+if (isset($_POST['submit'])){
+
+  $errors=array();
+  $title = $_POST['title'];
+  $cate =$_POST['cate'] ;
+  $img =$_FILES['img']['name'];
+  $cont = $_POST['cont'];
+  $price = $_POST['price'];
+  $descrip =$_POST['descrip'] ;
+  $add =$_POST['add'] ;
+  $special = $_POST['special'];
+
+
+
+
+
+  if(empty(trim($_POST['title']))){
+
+    $errors[]='Title is required';
+  } 
+  if(empty($_POST['cate'])){
+
+    $errors[]='please Select category';
+  }
+  if(empty($_FILES['img']['name'])){
+
+    $errors[]='please upload images';
+  }
+  if(empty($_POST['cont'])){
+
+    $errors[]='Contact is required';
+  }
+  if(empty(trim($_POST['price']))){
+
+    $errors[]=' Price is required';
+  } 
+  if(empty($_POST['descrip'])){
+
+    $errors[]='Description is required';
+  }
+  if(empty($_POST['add'])){
+
+    $errors[]='Address is required';
+  }
+  
+if (empty($errors)){
+// if no any errors adding data to database
+$title = mysqli_real_escape_string($connection, $_POST['title']);
+$cate = mysqli_real_escape_string($connection, $_POST['cate']);
+$img = mysqli_real_escape_string($connection, $_FILES['img']['name']);
+$cont = mysqli_real_escape_string($connection, $_POST['cont']);
+$price = mysqli_real_escape_string($connection, $_POST['price']);
+$descrip = mysqli_real_escape_string($connection, $_POST['descrip']);
+$add = mysqli_real_escape_string($connection, $_POST['add']);
+$cont = mysqli_real_escape_string($connection, $_POST['special']);
+
+$query = "INSERT INTO product (";
+$query .= "title, category, image , contact, price, description , address, special";
+$query .= ") VALUES (";
+$query .= "'{$title}','{$cate}','{$img}','{$cont}','{$price}', '{$descrip}','{$add}','{$special}'";
+$query .=")";
+
+$result = mysqli_query($connection, $query);
+ if ($result){
+// if successful
+header('Location: successful.php?user_added=true');
+ }else {
+
+  $errors[]='failed add post';
+ }
+
+}
+
+}
+//image upload part
+if(isset($_POST['submit'])){
+
+//button clicked
+$file_name = $_FILES['img']['name'];
+$file_type = $_FILES['img']['type'];
+$file_size = $_FILES['img']['size'];
+$temp_name = $_FILES['img']['tmp_name'];
+
+$upload_to = 'postimages/';
+move_uploaded_file($temp_name, $upload_to . $file_name);
+}
+
+?>  
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./post.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="navbar">
+        <img src="../images/logo.png" alt="" class="logo">
+        <nav>
+            <ul id="menuList">
+                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="../Products/products.html">Products</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Login/Register</a></li>
+            </ul>
+            
+        </nav>
+        <img src="../images/menu.png" alt="" class="menu-icon" onclick="togglemenu()">
+    </div>
+    <div class="post-content">
+        <div class="add-post">
+           <!---- <div class="left-side-post">
+                <h1 class="title-post">SignIn</h1>
+            </div>-->
+            <h1>Create Add</h1>
+            <p>If you want to rent your Item fill the details and press post.</p>
+            <div class="right-side-post">
+                <form method="post" action="post.php" class="Post" enctype="multipart/form-data">
+                        <h2>Title</h2>
+                        <input  type="text" required placeholder="Title" name="title" <?php echo 'value="' .$title . '"';?>>
+                        <h2>Select Category</h2>
+                        <select id="inputState"  name="cate"<?php echo 'value="' .$cate . '"';?>>
+                            <option>Cars</option>
+                            <option>Cars</option>
+                            <option>Cars</option>
+                            <option>Cars</option>
+                        </select>
+                        <h2>Upload Image</h2>
+                        <input type="file" id=" " name="img" <?php echo 'value="' .$img . '"';?> >
+                        <h2>contact</h2>
+                        <input class="contact" required placeholder="contact" type="text" name="cont"<?php echo 'value="' .$cont . '"';?>>
+                        <h2>Price (per day)</h2>
+                        <input class="contact" required placeholder="price per day" type="text" name="price"<?php echo 'value="' .$price . '"';?>>
+                        <h2>Address</h2>
+                        <input type="text" required placeholder="address"name="add"<?php echo 'value="' .$add . '"';?>>
+                        <h2>Description</h2>
+                        <textarea class="description" id="description" rows="3" name=descrip></textarea>
+                        <h2>Special</h2>
+                        <textarea class="special" id="special" rows="3" name=special></textarea>
+                    
+                    <p>please put correct details and quality image for create successfull add.if you put wrost one we remove it.</p>
+                    <button type="submit" name="submit" class="post-btn">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!----------------------footer----------------------------->
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-box">
+                <h2>About Us</h2>
+                <div class="left-content">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo perferendis totam est dolorem veritatis Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus, aut?</p>
+                </div>
+            </div>
+            <div class="center-box">
+                <h2>Adress</h2>
+                <div class="center-content">
+                    <ul>
+                        <li>Galle</li>
+                        <li>078963521</li>
+                        <li>bitloards@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="right-box">
+                <h2>Contact Us</h2>
+                <div class="right-content">
+                    <form>
+                        <h3>Email</h3>
+                        <input type="text" placeholder="email">
+                        <h3>Message</h3>
+                        <input type="text" placeholder="message">
+                    
+                        <button type="submit" class="footer-button">Send</button>
+                        
+                    </form>
+                </div>
+            </div>
+        </div>
+        <h4>copyright@bitLoards</h4>
+    </footer>
+    <script>
+        var menuList = document.getElementById("menuList");
+
+        menuList.style.maxHeight = "0px";
+
+        function togglemenu(){
+            if(menuList.style.maxHeight == "0px")
+                {
+                    menuList.style.maxHeight = "130px";
+                }
+            else
+                {
+                    menuList.style.maxHeight = "0px";
+                }
+        }
+    </script>
+</body>
+</html>

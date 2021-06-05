@@ -19,7 +19,7 @@ if (isset($_POST['submit'])){
   $errors=array();
   $title = $_POST['title'];
   $cate =$_POST['cate'] ;
-  $img = $_FILES['img']['name'];
+  $img =$_FILES['img']['name'];
   $cont = $_POST['cont'];
   $descrip =$_POST['descrip'] ;
   $add =$_POST['add'] ;

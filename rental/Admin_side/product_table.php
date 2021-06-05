@@ -16,8 +16,10 @@
 		$product_list .= "<td>{$product['title']}</td>";
 		$product_list .= "<td>{$product['category']}</td>";
         $product_list .= "<td>{$product['contact']}</td>";
+        $product_list .= "<td>{$product['price']}</td>";
         $product_list .= "<td>{$product['description']}</td>";
         $product_list .= "<td>{$product['address']}</td>";
+        $product_list .= "<td>{$product['special']}</td>";
 		$product_list .= "<td><a href=\"delete-product.php?	product_id={$product['id']}\" 
 						onclick=\"return confirm('Are you sure?');\">Delete</a></td>";
                         $product_list .= "</tr>";
@@ -45,8 +47,10 @@
                 <th>Title</th>
                 <th>Category</th>
                 <th>Contact</th>
+                <th>Price</th>
                 <th>Description</th>
                 <th>Address</th>
+                <th>special</th>
                 <th>Delete</th>
             </tr>
             </thead>
