@@ -113,9 +113,14 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./post.css">
+    <script src="https://kit.fontawesome.com/ee4a922350.js" crossorigin="anonymous"></script>
     <title>Document</title>
 </head>
 <body>
+    <div class="scroll-button">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
+    <div class="post-full">
     <div class="navbar">
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
@@ -151,14 +156,14 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <input type="file" id=" " name="img" <?php echo 'value="' .$img . '"';?> >
                         <h2>contact</h2>
                         <input class="contact" required placeholder="contact" type="text" name="cont"<?php echo 'value="' .$cont . '"';?>>
-                        <h2>Price (per day)</h2>
-                        <input class="contact" required placeholder="price per day" type="text" name="price"<?php echo 'value="' .$price . '"';?>>
                         <h2>Address</h2>
                         <input type="text" required placeholder="address"name="add"<?php echo 'value="' .$add . '"';?>>
                         <h2>Description</h2>
-                        <textarea class="description" id="description" rows="3" name=descrip></textarea>
+                        <textarea class="description" id="post-desc" rows="10" cols="50" name=descrip></textarea>
+                        <h2>Price (per day)</h2>
+                        <input class="contact" required placeholder="price per day" type="text" name="price"<?php echo 'value="' .$price . '"';?>>
                         <h2>Special</h2>
-                        <textarea class="special" id="special" rows="3" name=special></textarea>
+                        <textarea class="special" id="post-special" rows="10" cols="50" name=special></textarea>
                     
                     <p>please put correct details and quality image for create successfull add.if you put wrost one we remove it.</p>
                     <button type="submit" name="submit" class="post-btn">Post</button>
@@ -185,6 +190,11 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <li>bitloards@gmail.com</li>
                     </ul>
                 </div>
+                <div class="foot-icons">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="right-box">
                 <h2>Contact Us</h2>
@@ -203,6 +213,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
         </div>
         <h4>copyright@bitLoards</h4>
     </footer>
+</div>
     <script>
         var menuList = document.getElementById("menuList");
 
@@ -218,6 +229,22 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                     menuList.style.maxHeight = "0px";
                 }
         }
+        const scrollBtn = document.querySelector('.scroll-button')
+
+        window.addEventListener('scroll', () =>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollBtn.style.display = 'block';
+            }
+            else{
+                scrollBtn.style.display = 'none';
+            }
+        })
+        scrollBtn.addEventListener('click' , () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
     </script>
 </body>
 </html>
