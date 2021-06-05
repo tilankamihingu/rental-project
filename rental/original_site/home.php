@@ -32,7 +32,7 @@
                     <li><a href="#">Home</a></li>
                     <li><a href="../Products/products.html">Products</a></li>
                     <li><a href="#">Home</a></li>
-                    <li><a href="../Register/register.html">Login/Register</a></li>
+                    <li><a href="./loginnew.php">Login/Register</a></li>
                 </ul>
                 
             </nav>

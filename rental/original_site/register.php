@@ -63,7 +63,7 @@
 
 			if ($result) {
 				// query successful... redirecting to users page
-				header('Location: successful.php?user_added=true');
+				header('Location: loginnew.php?user_added=true');
 			} else {
 				$errors[] = 'Failed to add the new record.';
 			}

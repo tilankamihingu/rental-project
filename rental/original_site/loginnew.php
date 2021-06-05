@@ -47,7 +47,7 @@
 				verify_query($result_set);
 
 				// redirect to advertising.php
-				header('Location: successful.php');
+				header('Location: post.php');
 			} else {
 				// user name and password invalid
 				$errors[] = 'Invalid Username / Password';
@@ -75,7 +75,7 @@
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
             <ul id="menuList">
-                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="./home.php">Home</a></li>
                 <li><a href="../Products/products.html">Products</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Login/Register</a></li>

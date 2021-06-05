@@ -125,7 +125,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
             <ul id="menuList">
-                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="./home.php">Home</a></li>
                 <li><a href="../Products/products.html">Products</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Login/Register</a></li>
