@@ -4,10 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee4a922350.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="./post.css">
     <title>Document</title>
 </head>
 <body>
+    <div class="scroll-button">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
+    <div class="post-full">
     <div class="navbar">
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
@@ -46,9 +51,11 @@
                         <h2>Adress</h2>
                         <input type="text" required placeholder="adress">
                         <h2>Description</h2>
-                        <input type="text" required placeholder="description" id="post-desc" >
+                        <textarea name="" id="post-desc" cols="50" rows="10"></textarea>
+                        <h2>Price</h2>
+                        <input type="text" required placeholder="Price">
                         <h2>Special</h2>
-                        <input type="text" placeholder="special">
+                        <textarea name="" id="post-special" cols="50" rows="10"></textarea>
                     
                     <p>please put correct details and quality image for create successfull add.if you put wrost one we remove it.</p>
                     <button type="submit" class="post-btn">Post</button>
@@ -73,7 +80,12 @@
                         <li>Galle</li>
                         <li>078963521</li>
                         <li>bitloards@gmail.com</li>
-                    </ul>
+                    </ul>    
+                </div>
+                <div class="foot-icons">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
                 </div>
             </div>
             <div class="right-box">
@@ -93,6 +105,7 @@
         </div>
         <h4>copyright@bitLoards</h4>
     </footer>
+    </div>
     <script>
         var menuList = document.getElementById("menuList");
 
@@ -108,6 +121,23 @@
                     menuList.style.maxHeight = "0px";
                 }
         }
+
+        const scrollBtn = document.querySelector('.scroll-button')
+
+        window.addEventListener('scroll', () =>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollBtn.style.display = 'block';
+            }
+            else{
+                scrollBtn.style.display = 'none';
+            }
+        })
+        scrollBtn.addEventListener('click' , () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
     </script>
 </body>
 </html>

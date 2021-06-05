@@ -5,10 +5,32 @@
     box-sizing: border-box ;
 }
 
-.full{
-    background: darkgray;
+.product-full{
+    background: #F2F6FC;
     overflow: hidden;
     width: 100%;
+    max-width: 1280px;
+}
+
+.scroll-button{
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    color: #0F69F3;
+    z-index: 1000;
+}
+
+.scroll-button:hover{
+    color: #6149DC;
+}
+
+.scroll-button .active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .navbar{
@@ -19,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #000;
+    background: #0F69F3;
     position: fixed;
     z-index: 1000;
  }
@@ -31,10 +53,10 @@
  }
  
  .menu-icon{
-     width: 25px;
+     width: 30px;
      cursor: pointer;
      display: none;
-     border: 1px solid #009688;
+     margin-right: 20px;
  }
  
  nav{
@@ -61,7 +83,7 @@
      content: '';
      height: 3px;
      width: 0;
-     background: #009688;
+     background: #D8E7FC;
      position: absolute;
      left: 0;
      bottom: -10px;
@@ -141,8 +163,8 @@
     width: 100%;
     border: none;
     outline: none;
-    background: #009688;
-    color: white;
+    background: #0F69F3;
+    color: #fff;
     text-align: center;
     padding: 10px 0;
     margin: 10px 0;
@@ -163,7 +185,7 @@
     width: 160px;
     border: none;
     outline: none;
-    background: #ccc;
+    background: #ffffff;
     border-radius: 5px;
     padding-left: 10px;
 }
@@ -171,7 +193,7 @@
 .product-top h1{
     font-size: 45px;
     font-weight: 600;
-    border-bottom: 3px solid #009688;
+    border-bottom: 3px solid #0F69F3;
 }
 
 .product-top p{
@@ -184,11 +206,11 @@
 
 footer{
     width: 100%;
-    background: #000;
+    background: #0c0047;
 }
 
 .footer-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     display: flex;
     padding: 25px;
@@ -211,7 +233,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
     margin-bottom: 20px;
 }
 
@@ -230,7 +252,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .center-content{
@@ -252,7 +274,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .right-content{
@@ -269,13 +291,13 @@ footer h4{
     height: 40px;
     padding-left: 5px;
     border: none;
-    background: #ccc;
+    background: #F2F6FC;
     outline: none;
     margin-bottom: 10px;
 }
 
 .footer-button{
-   background: #009688;
+   background: #6149DC;
    border: none;
    outline: none;
    width: 100%;
@@ -286,13 +308,25 @@ footer h4{
    margin-top: 20px;
 }
 
+.foot-icons{
+    display: flex;
+    font-size: 2rem;
+}
 
+.foot-icons i{
+    margin-right: 30px;
+    color: #fff;
+}
+
+.foot-icons i:hover{
+    color: crimson;
+}
 
 
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: linear-gradient(#ff54a2, #ff575a);
+        background: #0F69F3;
         position: absolute;
         top: 75px;
         right: 0;
@@ -314,7 +348,7 @@ footer h4{
     }
 
     .logo{
-        width: 100px;
+        
         margin-left: 3px;
     }
 
@@ -345,13 +379,13 @@ footer h4{
         font-size: 18px;
     }
 
-    .right-content form input{
+    /*.right-content form input{
         width: 90%;
     }
 
     .footer-button{
         width: 90%;
-    }
+    }*/
 
     .left-box{
         margin-bottom: 20px;
@@ -373,7 +407,7 @@ footer h4{
     .product-top h1{
         font-size: 25px;
         font-weight: 600;
-        border-bottom: 3px solid #009688;
+        border-bottom: 3px solid #0F69F3;
     }
     
     .product-top p{
@@ -383,5 +417,8 @@ footer h4{
 
     .product-top select{
         width: 80px;
+    }
+    .scroll-button{
+        font-size: 2rem;
     }
 }
