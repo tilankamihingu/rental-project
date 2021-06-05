@@ -148,7 +148,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <h2>Select Category</h2>
                         <select id="inputState"  name="cate"<?php echo 'value="' .$cate . '"';?>>
                             <option>Cars</option>
-                            <option>Cars</option>
+                            <option>clothes</option>
                             <option>Cars</option>
                             <option>Cars</option>
                         </select>

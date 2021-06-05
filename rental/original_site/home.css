@@ -6,14 +6,36 @@
 }
 
 .full{
-    background: darkgray;
+    background: #F2F6FC;
     overflow: hidden;
+}
+
+.scroll-button{
+    font-size: 3rem;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    
+    color: #0F69F3;
+    z-index: 1000;
+}
+
+.scroll-button:hover{
+    color: #6149DC;
+}
+
+.scroll-button .active{
+    bottom: 32px;
+    pointer-events: auto;
+    opacity: 1;
 }
 
 .container{
     width: 100%;
     min-height: 100vh;
-    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url('../images/banner.jpg');
+    max-width: 1280px;
+    justify-content: center;
     background-size: cover;
     background-position: center;
 }
@@ -26,7 +48,7 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: #000;
+   background: #0F69F3;
    position: fixed;
    z-index: 1000;
 }
@@ -38,10 +60,10 @@
 }
 
 .menu-icon{
-    width: 25px;
+    width: 30px;
     cursor: pointer;
     display: none;
-    border: 1px solid #009688;
+    margin-right: 20px;
 }
 
 nav{
@@ -68,7 +90,7 @@ nav ul li a::after{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background: #D8E7FC;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -84,13 +106,32 @@ nav ul li a:hover::after{
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    text-align: center;
-    color: #fff;   
+    color: #000;   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.content-details{
+    
+    margin-right: 80px;
+    padding: 10px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.content img{
+    max-width: 650px;
+    width: 100%;
+    max-height: 650px;
+    height: 100%;
 }
 
 .content h1{
     font-size: 70px;
-    margin-top: 80px;
+    margin-top: 20px;
+    
 }
 
 .content p{
@@ -103,19 +144,19 @@ button{
     width: 200px;
     padding: 15px 0;
     text-align: center;
-    margin: 20px 10px;
+    margin: 20px 0px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #009688;
+    border: 2px solid #6149DC;
     background: transparent;
-    color: #fff;
+    color: #000;
     cursor: pointer;
     position: relative;
     overflow: hidden;
 }
 
 span{
-    background: #009688;
+    background: #6149DC;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -131,7 +172,7 @@ button:hover span{
 }
 
 button:hover{
-    border: none;
+    color: #F2F6FC;
 }
 
 /*----------------------features items-------------*/
@@ -148,7 +189,7 @@ button:hover{
 }
 
 .features-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -174,11 +215,11 @@ button:hover{
 .most-choose{
     margin: 100px 0;
     padding: 30px;
-    background: #252529;
+    background: #D8E7FC;
 }
 
 .most-choose-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -187,8 +228,9 @@ button:hover{
 .most-choose-container h1{
     margin-bottom: 20px;
     padding-bottom: 10px;
-    color: #fff;
-    border-bottom: 1px solid #009688;
+    font-size: 37px;
+    color: black;
+    border-bottom: 1px solid #F2F6FC;
     text-align: center;
 }
 
@@ -217,7 +259,7 @@ button:hover{
 }
 
 .plan-event-container{
-    max-width: 1080px;
+    max-width: 1280px;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -232,13 +274,16 @@ button:hover{
 
 .plan-event-col{
     flex-basis: 50%;
-    min-width: 250px;
+    max-width: 450px;
     margin-bottom: 30px;
 }
 
 .plan-event-col img{
+    max-width: 600px;
     width: 100%;
-    height: 600px;
+    max-height: 600px;
+    height: 100%;
+    margin: 20px;
 }
 
 .plan-event-col h1{
@@ -255,7 +300,7 @@ button:hover{
 }
 .plan{
     width: 250px;
-    background: #009688;
+    background: #0F69F3;
     border: none;
     color: #fff;
     border-radius: 10px;
@@ -270,6 +315,7 @@ button:hover{
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 15px 0;
+    max-width: 1440px;
 }
 
 .top-rated-container{
@@ -279,10 +325,11 @@ button:hover{
 .top-rated-container h1{
     text-align: center;
     font-size: 55px;
+    font-weight: 800;
 }
 
 .top-rated .top-rated-card {
-    max-width: 320px;
+    max-width: 360px;
     background: #fff;
     width: 100%;
     overflow: hidden;
@@ -333,7 +380,7 @@ button:hover{
     width: 100%;
     border: none;
     outline: none;
-    background: #009688;
+    background: #0F69F3;
     color: white;
     text-align: center;
     padding: 10px 0;
@@ -343,18 +390,22 @@ button:hover{
     letter-spacing: 2px;
 }
 
+
+
 /*---------------------footer-------------------*/
 
 footer{
     width: 100%;
-    background: #000;
+    background: #0c0047;
 }
 
 .footer-container{
-    max-width: 1080px;
+    max-width: 1280px;
+    width: 100%;
     margin: auto;
     display: flex;
     padding: 25px;
+    
 }
 
 footer h4{
@@ -374,7 +425,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
     margin-bottom: 20px;
 }
 
@@ -393,7 +444,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .center-content{
@@ -415,7 +466,7 @@ footer h4{
     color: #fff;
     font-weight: 600;
     padding-bottom: 5px;
-    border-bottom: 1px solid #009688;
+    border-bottom: 1px solid #D8E7FC;
 }
 
 .right-content{
@@ -432,13 +483,14 @@ footer h4{
     height: 40px;
     padding-left: 5px;
     border: none;
-    background: #ccc;
+    background: #F2F6FC;
     outline: none;
     margin-bottom: 10px;
 }
 
 .footer-button{
-   background: #009688;
+   background: #6149DC;
+   color: #fff;
    border: none;
    outline: none;
    width: 100%;
@@ -448,13 +500,25 @@ footer h4{
    border-radius: 0;
 }
 
+.foot-icons{
+    display: flex;
+    font-size: 2rem;
+}
 
+.foot-icons i{
+    margin-right: 30px;
+    color: #fff;
+}
 
+.foot-icons i:hover{
+    color: crimson;
+}
 
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: linear-gradient(#ff54a2, #ff575a);
+        background: #0F69F3;
+        opacity: 0.8;
         position: absolute;
         top: 75px;
         right: 0;
@@ -476,13 +540,17 @@ footer h4{
     }
 
     .logo{
-        width: 100px;
+    
         margin-left: 3px;
     }
 
     #menuList{
         overflow: hidden;
         transition: 0.5s;
+    }
+
+    .content{
+        flex-direction: column-reverse;
     }
 
     .content h1{
@@ -492,6 +560,19 @@ footer h4{
     .content p{
         margin-left: 20px;
         margin-right: 20px;
+    }
+
+    .content img{
+        margin-top: 60px;
+    }
+
+    .content-details{
+        text-align: center;
+        margin: auto;
+    }
+
+    .top-rated-container h1{
+        font-size: 47px;
     }
 
     .footer-container{
@@ -507,13 +588,13 @@ footer h4{
         font-size: 18px;
     }
 
-    .right-content form input{
+    /*.right-content form input{
         width: 90%;
     }
 
     .footer-button{
         width: 90%;
-    }
+    }*/
 
     .left-box{
         margin-bottom: 20px;
@@ -537,5 +618,14 @@ footer h4{
 
     .plan-event-col p{
         font-size: 14px;
+    }
+
+    .plan-event-col img{
+        margin: 0;
+        width: 300px;
+    }
+
+    .scroll-button{
+        font-size: 2rem;
     }
 }
