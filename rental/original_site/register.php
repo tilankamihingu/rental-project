@@ -63,7 +63,7 @@
 
 			if ($result) {
 				// query successful... redirecting to users page
-				header('Location: successful.php?user_added=true');
+				header('Location: loginnew.php?user_added=true');
 			} else {
 				$errors[] = 'Failed to add the new record.';
 			}
@@ -88,11 +88,16 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/ee4a922350.js" crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
     <link rel="stylesheet" href="./register.css">
 </head>
 <body>
+<div class="scroll-button">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
+    <div class="register-full">
     <div class="navbar">
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
@@ -109,7 +114,7 @@
     <div class="register-content">
         <div class="register">
             <div class="left-side">
-                <h1 class="title-register">SignUP</h1>
+            <h1 class="title-register">SignUP <br> <i class="fa fa-user-plus" aria-hidden="true"></i></h1>
             </div>
             <div class="right-side">
                 
@@ -148,6 +153,11 @@
                         <li>bitloards@gmail.com</li>
                     </ul>
                 </div>
+                <div class="foot-icons">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="right-box">
                 <h2>Contact Us</h2>
@@ -166,7 +176,8 @@
         </div>
         <h4>copyright@bitLoards</h4>
     </footer>
-    <script>
+</div>
+<script>
         var menuList = document.getElementById("menuList");
 
         menuList.style.maxHeight = "0px";
@@ -181,6 +192,29 @@
                     menuList.style.maxHeight = "0px";
                 }
         }
+        const scrollBtn = document.querySelector('.scroll-button')
+
+        window.addEventListener('scroll', () =>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollBtn.style.display = 'block';
+            }
+            else{
+                scrollBtn.style.display = 'none';
+            }
+        })
+        scrollBtn.addEventListener('click' , () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
+    </script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({
+          offset: 100,
+          duration: 400
+      });
     </script>
 </body>
 </html>

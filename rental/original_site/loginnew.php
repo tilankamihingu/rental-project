@@ -47,7 +47,7 @@
 				verify_query($result_set);
 
 				// redirect to advertising.php
-				header('Location: successful.php');
+				header('Location: post.php');
 			} else {
 				// user name and password invalid
 				$errors[] = 'Invalid Username / Password';
@@ -62,15 +62,20 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ee4a922350.js" crossorigin="anonymous"></script>
     <title>Login</title>
     <link rel="stylesheet" href="./loginnew.css">
 </head>
 <body>
+<div class="scroll-button">
+        <i class="fas fa-arrow-circle-up"></i>
+    </div>
+    <div class="login-full">
     <div class="navbar">
         <img src="../images/logo.png" alt="" class="logo">
         <nav>
             <ul id="menuList">
-                <li><a href="../Home/home.html">Home</a></li>
+                <li><a href="./home.php">Home</a></li>
                 <li><a href="../Products/products.html">Products</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Login/Register</a></li>
@@ -82,7 +87,7 @@
     <div class="login-content">
         <div class="login">
             <div class="left-side-login">
-                <h1 class="title-login">SignIn</h1>
+            <h1 class="title-login">SignIn <br> <i class="fa fa-sign-in" aria-hidden="true"></i></h1>
             </div>
             <div class="right-side-login">
                 <form method="post" action="loginnew.php">
@@ -116,6 +121,11 @@
                         <li>bitloards@gmail.com</li>
                     </ul>
                 </div>
+                <div class="foot-icons">
+                    <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                    <i class="fa fa-instagram" aria-hidden="true"></i>
+                    <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                </div>
             </div>
             <div class="right-box">
                 <h2>Contact Us</h2>
@@ -134,7 +144,8 @@
         </div>
         <h4>copyright@bitLoards</h4>
     </footer>
-    <script>
+</div>
+<script>
         var menuList = document.getElementById("menuList");
 
         menuList.style.maxHeight = "0px";
@@ -149,6 +160,30 @@
                     menuList.style.maxHeight = "0px";
                 }
         }
+        const scrollBtn = document.querySelector('.scroll-button')
+
+        window.addEventListener('scroll', () =>{
+            if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20){
+                scrollBtn.style.display = 'block';
+            }
+            else{
+                scrollBtn.style.display = 'none';
+            }
+        })
+        scrollBtn.addEventListener('click' , () => {
+            window.scroll({
+                top: 0,
+                behavior: "smooth"
+            })
+        })
     </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      offset: 100,
+      duration: 400
+  });
+</script>
 </body>
 </html>
