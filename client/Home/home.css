@@ -175,7 +175,7 @@ button:hover{
     color: #F2F6FC;
 }
 
-/*----------------------features items-------------*/
+/*----------------------features items-------------
 
 .features{
     margin: 180px 0;
@@ -208,6 +208,51 @@ button:hover{
 
 .features-col img:hover{
     width: 95%;
+}*/
+
+/*---------------post-container----------------*/
+.post-container{
+    margin-top: 130px;
+    padding: 20px;
+}
+
+.post-container .post{
+    max-width: 360px;
+    width: 100%;
+    background: #fff;
+    /*box-shadow: 0 3px 5px rgba(0,0,0,.3);*/
+    margin: 20px;
+    padding-bottom: 20px;
+}
+
+.post-container .post .post-image img{
+    height: 250px;
+    width: 100%;
+    object-fit: cover;
+}
+
+.post-container .post .post-content{
+    padding: 0 20px;
+    margin: 15px 0;
+}
+
+.post-container .post .post-content .post-title{
+    font-weight: 600;
+    font-size: 22px;
+    color: #333;
+    text-transform: capitalize;
+}
+
+.post-container .post .post-content p{
+    font-size: 14px;
+    padding: 5px 0;
+    color: #666;
+}
+
+.post-container .post .post-content .link{
+    display: block;
+    color: tomato;
+    margin-top: 10px;
 }
 
 /*------------------------------most choose------------------------*/
