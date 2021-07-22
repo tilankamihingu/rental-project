@@ -7,9 +7,9 @@ $title = '';
 $cate = '';
 $img = '';
 $cont = '';
+$add = '';
 $price = '';
 $descrip = '';
-$add = '';
 $special = '';
 
 
@@ -22,9 +22,9 @@ if (isset($_POST['submit'])){
   $cate =$_POST['cate'] ;
   $img =$_FILES['img']['name'];
   $cont = $_POST['cont'];
+  $add =$_POST['add'] ;
   $price = $_POST['price'];
   $descrip =$_POST['descrip'] ;
-  $add =$_POST['add'] ;
   $special = $_POST['special'];
 
 
@@ -69,12 +69,12 @@ $cont = mysqli_real_escape_string($connection, $_POST['cont']);
 $price = mysqli_real_escape_string($connection, $_POST['price']);
 $descrip = mysqli_real_escape_string($connection, $_POST['descrip']);
 $add = mysqli_real_escape_string($connection, $_POST['add']);
-$cont = mysqli_real_escape_string($connection, $_POST['special']);
+$cont = mysqli_real_escape_string($connection, $_POST['cont']);
 
 $query = "INSERT INTO product (";
-$query .= "title, category, image , contact, price, description , address, special";
+$query .= "title, category, image , contact, address, description, price , special";
 $query .= ") VALUES (";
-$query .= "'{$title}','{$cate}','{$img}','{$cont}','{$price}', '{$descrip}','{$add}','{$special}'";
+$query .= "'{$title}','{$cate}','{$img}','{$cont}','{$add}','{$descrip}','{$price}','{$special}'";
 $query .=")";
 
 $result = mysqli_query($connection, $query);
@@ -126,7 +126,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
         <nav>
             <ul id="menuList">
                 <li><a href="./home.php">Home</a></li>
-                <li><a href="../Products/products.html">Products</a></li>
+                <li><a href="./products.php">Products</a></li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Login/Register</a></li>
             </ul>
@@ -147,10 +147,11 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <input  type="text" required placeholder="Title" name="title" <?php echo 'value="' .$title . '"';?>>
                         <h2>Select Category</h2>
                         <select id="inputState"  name="cate"<?php echo 'value="' .$cate . '"';?>>
+                            <option selected="">select..</option>
+                            <option>wedding clothes</option>
                             <option>Cars</option>
-                            <option>clothes</option>
-                            <option>Cars</option>
-                            <option>Cars</option>
+                            <option>Wedding items</option>
+                            <option>Lighting</option>
                         </select>
                         <h2>Upload Image</h2>
                         <input type="file" id=" " name="img" <?php echo 'value="' .$img . '"';?> >
@@ -163,7 +164,7 @@ move_uploaded_file($temp_name, $upload_to . $file_name);
                         <h2>Price (per day)</h2>
                         <input class="contact" required placeholder="price per day" type="text" name="price"<?php echo 'value="' .$price . '"';?>>
                         <h2>Special</h2>
-                        <textarea class="special" id="post-special" rows="10" cols="50" name=special></textarea>
+                        <textarea class="special" id="post-special" rows="10" cols="50" name=special <?php echo 'value="' .$special . '"';?>></textarea>
                     
                     <p>please put correct details and quality image for create successfull add.if you put wrost one we remove it.</p>
                     <button type="submit" name="submit" class="post-btn">Post</button>

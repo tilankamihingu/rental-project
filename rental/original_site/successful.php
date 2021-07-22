@@ -14,14 +14,14 @@
 <body>
 
 <div>
-    <h3><a href="./index.php">Back to Home</a></h3>
+    <h3><a href="./home.php">Back to Home</a></h3>
   </div>
 
 
 
 
 <div class="comment">
-<h2> Registration is Completed!</h2>
+<h2> Your Advertisment is posted successfully!</h2>
 
 </div>
 
