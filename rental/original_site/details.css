@@ -41,7 +41,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background: #0F69F3;
+    background: #00214E;
     position: fixed;
     z-index: 1000;
  }
@@ -296,7 +296,7 @@ footer h4{
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: #0F69F3;
+        background: #00214E;
         opacity: 0.8;
         position: absolute;
         top: 75px;

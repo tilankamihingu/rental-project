@@ -48,7 +48,8 @@
    display: flex;
    align-items: center;
    justify-content: space-between;
-   background: #0F69F3;
+   /*background: #0F69F3;*/
+   background: #00214E;
    position: fixed;
    z-index: 1000;
 }
@@ -57,6 +58,8 @@
     width: 120px;
     cursor: pointer;
     margin-left: 40px;
+    color: #fff;
+    font-weight: 600;
 }
 
 .menu-icon{
@@ -114,7 +117,6 @@ nav ul li a:hover::after{
 }
 
 .content-details{
-    
     margin-right: 80px;
     padding: 10px;
     max-width: 600px;
@@ -147,7 +149,8 @@ button{
     margin: 20px 0px;
     border-radius: 25px;
     font-weight: bold;
-    border: 2px solid #6149DC;
+    /*border: 2px solid #6149DC;*/
+    border: 2px solid #0F69F3;
     background: transparent;
     color: #000;
     cursor: pointer;
@@ -156,7 +159,7 @@ button{
 }
 
 span{
-    background: #6149DC;
+    background: #0F69F3;
     height: 100%;
     width: 0;
     border-radius: 25px;
@@ -261,11 +264,13 @@ button:hover{
 .most-choose{
     margin: 100px 0;
     padding: 30px;
-    background: #D8E7FC;
+    /*background: #D8E7FC;*/
+    background-image: url('../images/topbg.png');
 }
 
 .most-choose-container{
-    max-width: 1280px;
+    /*max-width: 1280px;*/
+    width: 100%;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -275,7 +280,7 @@ button:hover{
     margin-bottom: 20px;
     padding-bottom: 10px;
     font-size: 37px;
-    color: black;
+    color: #fff;
     border-bottom: 1px solid #F2F6FC;
     text-align: center;
 }
@@ -305,7 +310,8 @@ button:hover{
 }
 
 .plan-event-container{
-    max-width: 1280px;
+    /*max-width: 1280px;*/
+    width: 100%;
     margin: auto;
     padding-left: 25px;
     padding-right: 25px;
@@ -442,7 +448,8 @@ button:hover{
 
 footer{
     width: 100%;
-    background: #0c0047;
+    /*background: #0c0047;*/
+    background: #00214E;
 }
 
 .footer-container{
@@ -562,7 +569,7 @@ footer h4{
 @media only screen and (max-width:700px){
     nav ul{
         width: 100%;
-        background: #0F69F3;
+        background: #00214E;
         opacity: 0.8;
         position: absolute;
         top: 75px;
