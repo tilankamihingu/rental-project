@@ -51,7 +51,7 @@
     </div>
 
     <!------------------features items----------------------->
-    <div class="features">
+    <!--<div class="features">
         <div class="features-container">
             <div class="features-row">
                 <div class="features-col" >
@@ -63,6 +63,69 @@
                 <div class="features-col">
                     <img src="./images/car.jpg" alt="">
                 </div>
+            </div>
+        </div>
+    </div>-->
+    <!------------------slider-------------------------------->
+    <div class="post-container">
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
+            </div>
+        </div>
+        <div class="post">
+            <div class="post-image">
+                <img src="../images/car.jpg" alt="">
+            </div>
+            <div class="post-content">
+                <a href="#" class="post-title">Post title</a>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Optio veniam est odio, earum tempore mollitia eaque fugiat, consequatur rerum iusto aspernatur. Iusto adipisci ex maxime consequuntur perferendis nemo, necessitatibus blanditiis?</p>
+                
             </div>
         </div>
     </div>
@@ -210,6 +273,48 @@
       duration: 400
   });
 </script>
+
+<!----------slider-------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script type="text/javascript">
+        $('.post-container').slick({
+  dots: true,
+  infinite: true,
+  speed: 300,
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  autoplay: true,
+  autoplaySpeed: 2000,
+  responsive: [
+    {
+      breakpoint: 1024,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        infinite: true,
+        dots: true
+      }
+    },
+    {
+      breakpoint: 600,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 2
+      }
+    },
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1
+      }
+    }
+    // You can unslick at a given breakpoint now by adding:
+    // settings: "unslick"
+    // instead of a settings object
+  ]
+});
+    </script>
 
 </body>
 

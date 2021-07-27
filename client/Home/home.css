@@ -239,14 +239,15 @@ button:hover{
 .post-container .post .post-content .post-title{
     font-weight: 600;
     font-size: 22px;
-    color: #333;
+    color: #000;
+    text-decoration: none;
     text-transform: capitalize;
 }
 
 .post-container .post .post-content p{
     font-size: 14px;
     padding: 5px 0;
-    color: #666;
+    color: #000;
 }
 
 .post-container .post .post-content .link{
@@ -445,7 +446,6 @@ footer{
 }
 
 .footer-container{
-    max-width: 1280px;
     width: 100%;
     margin: auto;
     display: flex;
@@ -596,6 +596,7 @@ footer h4{
 
     .content{
         flex-direction: column-reverse;
+        
     }
 
     .content h1{
@@ -608,7 +609,8 @@ footer h4{
     }
 
     .content img{
-        margin-top: 60px;
+        margin-top: 130px;
+        height: 300px;
     }
 
     .content-details{

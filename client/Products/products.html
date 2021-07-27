@@ -30,14 +30,21 @@
     <!------------------products------------------------>
     <div class="product-container">
         <div class="product-top">
-            <h1>Products</h1>
+           <h1>Products</h1>
             <p>Select Your Category</p>
-            <select>
-                <option>Default</option>
-                <option>Car</option>
-                <option>Party</option>
-                <option>Photography</option>
+            <select class="indicator">
+                <option data-filter="all" class="active"><a href="#">Default</a></option>
+                <option data-filter="car"><a href="#">car</a></option>
+                <option data-filter="party"><a href="#">party</a></option>
+                <option data-filter="Photography"><a href="#">Photography</a></option>
             </select>
+            <!--<ul class="indicator">
+                <li data-filter="all" class="active"><a href="#">All</a></li>
+                <li data-filter="party"><a href="#">Party</a></li>
+                <li data-filter="Photography"><a href="#">Photography</a></li>
+                <li data-filter="car"><a href="#">car</a></li>
+            </ul>-->
+            
         </div>
     <div class="products">
         <div class="product-card">
@@ -54,6 +61,7 @@
             <div class="box">
                 <h3>DJ Party</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h5 data-category="car">Category</h5>
                 <h4>RS.25000.00(per day)</h4>
                 <button>Add to Cart</button>
             </div>
@@ -63,6 +71,7 @@
             <div class="box">
                 <h3>DJ Party</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h5 data-category="Photography">Category</h5>
                 <h4>RS.25000.00(per day)</h4>
                 <button>Add to Cart</button>
             </div>
@@ -72,6 +81,7 @@
             <div class="box">
                 <h3>DJ Party</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h5 data-category="party">Category</h5>
                 <h4>RS.25000.00(per day)</h4>
                 <button>Add to Cart</button>
             </div>
@@ -81,6 +91,7 @@
             <div class="box">
                 <h3>DJ Party</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h5 data-category="car">Category</h5>
                 <h4>RS.25000.00(per day)</h4>
                 <button>Add to Cart</button>
             </div>
@@ -90,6 +101,7 @@
             <div class="box">
                 <h3>DJ Party</h3>
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, officia.</p>
+                <h5 data-category="Photography">Category</h5>
                 <h4>RS.25000.00(per day)</h4>
                 <button>Add to Cart</button>
             </div>
@@ -177,5 +189,35 @@
           duration: 400
       });
     </script>
+   <!--<script type="text/javascript">
+       let indicator = document.querySelector('.indicator').children;
+let products = document.querySelector('.products').children;
+
+for(let i=0; i<indicator.length; i++)
+{
+    indicator[i].onclick = function(){
+        for(let x=0; x<indicator.length; x++)
+        {
+            indicator[x].classList.remove('active');
+        }
+        this.classList.add('active');
+        const displayItems = this.getAttribute('data-filter');
+        for(let z=0; z<products.length; z++)
+        {
+            products[z].style.transform = 'scale(0)';
+            setTimeout(()=>{
+                products[z].style.display = 'none';
+            },500);
+
+            if((products[z].getAttribute('data-category') == displayItems) || displayItems == 'all'){
+                products[z].style.transform = 'scale(1)';
+                setTimeout(()=>{
+                    products[z].style.display = '';
+                },500);
+            }
+        }
+    }
+}
+   </script>-->
 </body>
 </html>
